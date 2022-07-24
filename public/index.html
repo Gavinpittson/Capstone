@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="./Test.html">List</a>
+        <a> Home</a>
+      </nav>
+      <h1>TICKET PLACE</h1>
+      <nav>
+        <a>About Us</a>
+        <a>Calender</a>
+      </nav>
+    </header>
+    <main>
+      <div id="container-one">
+        <h2>UPCOMING CONCERTS</h2>
+        <div id="event-container"></div>
+      </div>
+      <div id="container-two">
+        <div id="day-info">
+          <div id="digital-clock"></div>
+          <script>
+            function Time() {
+              let date = new Date();
+              let hour = date.getHours();
+              let minute = date.getMinutes();
+              let second = date.getSeconds();
+              let period = "";
+
+              if (hour >= 12) {
+                period = "PM";
+              } else {
+                period = "AM";
+              }
+
+              if (hour == 0) {
+                hour = 12;
+              } else {
+                if (hour > 12) {
+                  hour = hour - 12;
+                }
+              }
+
+              hour = update(hour);
+              minute = update(minute);
+              second = update(second);
+
+              document.getElementById("digital-clock").innerText =
+                hour + " : " + minute + " : " + second + " " + period;
+
+              setTimeout(Time, 1000);
+            }
+
+            function update(t) {
+              if (t < 10) {
+                return "0" + t;
+              } else {
+                return t;
+              }
+            }
+            Time();
+          </script>
+          <div id="date">07/21/2022</div>
+        </div>
+        <div id="ticket-info">
+          <h2>YOUR TICKETS</h2>
+          <div id="ticket-container"></div>
+        </div>
+      </div>
+    </main>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
