@@ -49,5 +49,31 @@ module.exports = {
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
+    },
+
+    createTicket : (req, res) => {
+        let { band, location, date} = req.body
+        sequelize.query(`
+        insert into tickets(band, location, date)
+        values ('${band}', '${location}', '${date}')
+        `)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
+    getTickets : (req, res) => {
+        sequelize.query(`
+        select *
+        from tickets`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
+    deleteTickets : (req, res) => {
+        let { id } = req.params
+        sequelize.query(`
+        delete from tickets
+        where id = ${id}
+        `)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
     }
 }

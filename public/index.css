@@ -8,16 +8,42 @@
 main {
     display: flex;
     justify-content: space-around;
+    background-color: #E0E2DB;
+    
+}
+button:hover {
+    cursor: pointer;
 }
 
 /* ----------------------------------------------------------Header------------------------------------------------------------------------- */
 header {
-    background-color: blue;
+    background-color: #2E3532;
     height: 100px;
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 5px solid black;
+    
 }
 
+a {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 30px;
+    background-color: #D2D4C8;
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px solid black;
+    
+    
+    
+}
 
+a:hover {
+    cursor: pointer;
+}
+
+h1 
 
 
 
@@ -30,35 +56,46 @@ header {
 #container-two {
     display: flex;
     background-color: red;
-    width: 800px;
-    height: 100vh;
-    margin: 30px;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+    width: 600px;
+    height: 80vh;
+    margin: 20px;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    padding: 20px;
 }
 
 #day-info {
-    background-color: purple;
+    background-color: #2E3532;
     width: 650px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     /* flex-direction: column; */
     justify-content: space-around;
+    margin-top: 30px;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+    border: 5px solid black;
 }
 
 #ticket-info {
-    background-color: blue;
-    height: 800px;
+    background-color: #2E3532;
+    height: 822px;
     width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-right: 25px;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    border-bottom: 5px solid black;
+    /* border-top: 4px solid black; */
+    border-right: 5px solid black;
+    border-left: 5px solid black;
 }
 #digital-clock {
-    background-color: #66ffff;
+    background-color: #D2D4C8;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -68,17 +105,25 @@ header {
     font-size: 40px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    border-right: 2px solid black;
+    border-left: 4px solid black;
 }
 #date {
-    background-color: orange ;
+    background-color: #D2D4C8 ;
     width: 500px;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    border-left: 2px solid black;
 }
  #ticket-container {
-    background-color: green;
-    height: 700px;
+    /* background-color: green; */
+    height: 720px;
     width: 600px;
     margin: 10px;
     display: flex;
@@ -90,11 +135,15 @@ header {
 
 /* ----------------------------------------------------------CONTAINER ONE------------------------------------------------------------------------- */
 h2 {
-    background-color: blue;
+    background-color: #D2D4C8;
+    padding: 10px;
+    /* font-size: 20px; */
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px 0 black;
 }
 #container-one {
     display: flex;
-    background-color: green;
+    background-color: #8B2635;
     width: 1200px;
     height: 100vh;
     margin: 30px;
@@ -102,14 +151,17 @@ h2 {
     justify-content: space-around;
     padding: 10px;
     align-items: center;
+    border-radius: 20px ;
+    border: 5px solid black;
 }
 
 #event-container {
-    background-color: red;
+    /* background-color: red; */
     height: 860px;
-    width: 1000px;
+    width: 1120px;
     display: flex;
     flex-direction: column;
+    
     
     overflow-y:auto
 }
@@ -127,9 +179,12 @@ form {
 /* ----------------------------------------------------------Event Card------------------------------------------------------------------------- */
 
 .event-card {
-    border: 1px solid black;
+    border: 2px solid black;
+    background-color: #2E3532;
     padding: 20px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 8px;
 }
 
 .event-card > h2 {
@@ -145,19 +200,26 @@ form {
 
 /* ----------------------------------------------------------Ticket Container------------------------------------------------------------------------- */
 .ticket-card {
-    border: 1px solid black;
-    background-color: wheat;
+    border: 2px solid black;
+    background-color: #8B2635;
     padding: 20px;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 8px;
 }
 
 .ticket-card > h3 {
     margin-bottom: 10px;
 }
 
-.event-card > button {
+.ticket-card > button {
     margin-top: 10px;
     padding: 2px 10px;
+
+
 }
 
 /* ----------------------------------------------------------ETC------------------------------------------------------------------------- */
@@ -171,5 +233,16 @@ form {
     transition: 1s;
 }
 
+#date {
+    font-size: 40px;
+}
+
+h3 {
+    color: #E0E2DB;
+}
+
+#ticket-id {
+    color: black ;
+}
 
 
