@@ -35,7 +35,9 @@ module.exports = {
         select event_id, event.name as band, date, location.venue_id, location.name as venue
         from events as event
         join venues as location
-        on event.venue_id = location.venue_id;
+        on event.venue_id = location.venue_id
+        order by date ASC;
+        
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
